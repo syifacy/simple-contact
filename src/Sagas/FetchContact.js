@@ -32,7 +32,6 @@ export function* fetchUpdateContactWorker(action){
   }
 }
 export function* fetchDeleteContactWorker(action){
-  console.log("action", action)
   try{
     const result = yield call(fetchDeleteContact, action.id);
     yield put({type: 'DELETE_CONTACT_SUCCESS', payload:result});

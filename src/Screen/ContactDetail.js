@@ -30,7 +30,6 @@ class ContactDetail extends Component {
         }
     }
     static navigationOptions = (props) => {
-        console.log("props", props);
         return{
             title: _.startCase(localString.contactDetailTitle),
         }
@@ -44,7 +43,6 @@ class ContactDetail extends Component {
         });
     }
     componentWillReceiveProps(nextProps){
-        console.log("next props", nextProps);
         if (nextProps.updateSuccess || nextProps.deleteSuccess){
             const resetAction = StackActions.reset({
                 index: 0,
@@ -85,6 +83,7 @@ class ContactDetail extends Component {
             lastName: value
         });
     }
+
     _onChangeAge = (value) =>{
         this.setState({
             age: value

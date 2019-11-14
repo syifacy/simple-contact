@@ -18,7 +18,6 @@ class ContactList extends PureComponent{
           index={index}
           dataComponent = {item}
           onDetailList={this.props.onDetailListPress}
-          onDeleteSelected={this.props.onDeletePress}
         />
       )
     }

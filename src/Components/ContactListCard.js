@@ -17,12 +17,6 @@ class ContactListCard extends PureComponent {
           >
             <View style={styles.containerButton}>
               <Text style={styles.boldText}>{`${dataComponent.firstName} ${dataComponent.lastName}`}</Text>
-              <TouchableOpacity 
-                style={styles.icon}
-                onPress={this.props.onDeleteSelected(dataComponent)}
-                >
-                
-              </TouchableOpacity>
             </View>
           </TouchableOpacity>
       )

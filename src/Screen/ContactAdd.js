@@ -28,13 +28,11 @@ class ContactAdd extends Component {
         }
     }
     static navigationOptions = (props) => {
-        console.log("props", props);
         return{
             title: _.startCase(localString.contactAddTitle),
         }
     };
     componentWillReceiveProps(nextProps){
-        console.log("next props", nextProps);
         if (nextProps.createSuccess){
             const resetAction = StackActions.reset({
                 index: 0,

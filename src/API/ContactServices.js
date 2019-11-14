@@ -2,7 +2,6 @@ import axios from 'axios';
 export async function fetchContactList(){
   return await axios.get(`https://simple-contact-crud.herokuapp.com/contact`, null )
     .then((response) => {
-      console.log("response get list", response.data)
       return response.data
     })
     .catch(err => {
@@ -13,7 +12,6 @@ export async function fetchContactList(){
 export async function fetchDetailContact(id) {
   return await axios.get(`https://simple-contact-crud.herokuapp.com/contact/${id}`, null)
   .then((response) =>{
-    console.log("response get detail", response.data)
     return response.data
   })
   .catch(err => {
@@ -39,7 +37,6 @@ export async function fetchUpdateContact(params){
 export async function fetchDeleteContact(id){
   return await axios.delete(`https://simple-contact-crud.herokuapp.com/contact/${id}`, null)
   .then((response) =>{
-    console.log("response delete", response.data)
     return response.data
   })
   .catch(err => {
@@ -54,7 +51,6 @@ export async function fetchNewContact(params){
     photo: params.body.photo,
   })
   .then((response) =>{
-    console.log("response post", response.data)
     return response.data
   })
   .catch(err => {

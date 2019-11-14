@@ -36,12 +36,9 @@ class ContactBoard extends Component {
         await this.props.getListContact();
     }
     _goToDetail= (item) => async() =>{
-        console.log("selected item", item);
         this.props.navigation.navigate('Detail', {item})
     }
-    _deleteSelectedContact = (data) => () =>{
-        console.log("delete item", data);
-    }
+   
     render() {
         const {listContact, isLoading} = this.props;
       return (
@@ -50,7 +47,6 @@ class ContactBoard extends Component {
                 listData={listContact}
                 refreshing={isLoading}
                 onDetailListPress={this._goToDetail}
-                onDeletePress={this._deleteSelectedContact}
                 onRefresh={this._onRefresh}
             />
         </ScrollView>
